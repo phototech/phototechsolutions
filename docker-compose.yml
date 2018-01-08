@@ -1,0 +1,9 @@
+version: '3'
+services:
+    web:
+        image: nginx:1.13
+        environment:
+            VIRTUAL_HOST: 'phototechsolutions.com,origin.phototechsolutions.com,www.phototechsolutions.com'
+            LETSENCRYPT_HOST: 'phototechsolutions.com,origin.phototechsolutions.com,www.phototechsolutions.com'
+        volumes:
+          - ./web:/usr/share/nginx/html
